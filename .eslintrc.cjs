@@ -199,6 +199,12 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": ["off", { "ts-ignore": false }],
 
     // vue
+    "vue/block-order": [
+      "error",
+      {
+        order: ["template", "script", "style"],
+      },
+    ],
     "vue/no-v-html": "off",
     "vue/require-default-prop": "off",
     "vue/require-explicit-emits": "off",
@@ -219,7 +225,7 @@ module.exports = {
     ],
 
     // prettier
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { usePrettierrc: true }],
 
     // import
     "import/first": "error",
@@ -321,4 +327,4 @@ module.exports = {
     "unicorn/prefer-type-error": "error",
     "unicorn/throw-new-error": "error",
   },
-}
+};
